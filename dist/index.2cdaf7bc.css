@@ -1,13 +1,22 @@
 /*!
  * YUAN-Bootstrap3-MAX for v3.4.1
- * Copyright 2019 YuanYuBo.
+ * Copyright 2022 YuanYuBo.
+ * FOR THE MUSIC PROJECT @ SOUNDWAVE
  */
+
+/* 基础样式 */
+small{
+    font-size: 15px;
+}
 
 .yuan-mb-0{
     margin-bottom: 0!important;
 }
 .yuan-m-0{
     margin: 0!important;
+}
+.yuan-p-s1{
+    padding: 10px;
 }
 .yuan-bg-light{
     background-color: #eee!important;
@@ -18,19 +27,35 @@
 .yuan-bg-dark{
     background-color: #242424!important;
 }
+.yuan-bg-dark-opacity-90{
+    background-color:rgba(36, 36, 36, .95)
+}
 .yuan-color-white{
     color: #fff!important;
 }
 .yuan-opacity-50{
     opacity: .5;
 }
-.yuan-opacity-90{
-    opacity: .9;
-}
 .yuan-opacity-50-hover-80:hover{
     opacity: .8;
 }
 .yuan-shadow-s1{
-    box-shadow: 0 -1px 8px #242424;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, .7);
 }
+.yuan-font-size-s1{
+    font-size: 25px;
+}
+.yuan-text-shadow-light{
+    text-shadow: 0 0 2px rgb(180, 180, 180);
+}
+.yuan-border-top-black{
+    border-top: 1px solid #000;
+}
+.yuan-border-bottom-black{
+    border-bottom: 1px solid #000;
+}
+.yuan-border-bottom-red{
+    border-bottom: 1px solid #a01111;
+}
+
 /*# sourceMappingURL=index.2cdaf7bc.css.map */
