@@ -22,32 +22,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand yuan-color-white yuan-font-size-s1 yuan-text-shadow-light" href="">Soundwave</a>
+                <a class="navbar-brand yuan-color-white yuan-font-size-s1 yuan-text-shadow" href="">Soundwave</a>
             </div>
 
-            <div class="collapse navbar-collapse yuan-text-shadow-light" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse yuan-text-shadow" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
+                    <li id="homepageBTN" class="active"><a href="#home">Homepage</a></li>
+                    <li id="aboutBTN"><a href="#about">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            aria-expanded="false">More <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
@@ -62,41 +48,66 @@
     </nav>
 
     <div class="yuan-bg-red yuan-border-bottom-red">
-        <div class="container yuan-text-shadow-light">
+        <div class="container yuan-text-shadow">
             <ol class="breadcrumb yuan-bg-red yuan-mb-0">
                 <li><a class="yuan-color-white yuan-opacity-50 yuan-opacity-50-hover-80" href="">Soundwave</a></li>
-                <li class="active yuan-color-white">Homepage</li>
+                <li id="info" class="active yuan-color-white">Homepage</li>
             </ol>
         </div>
     </div>
 
     <div class="yuan-bg-light">
         <div class="container">
-            <div class="jumbotron yuan-text-shadow-light">
+            <div class="jumbotron yuan-text-shadow">
                 <h2>Hello, Soundwave.</h2>
-                <small>介绍： 你爱的歌，值得反复聆听
-                    私人雷达，每日更新，收藏你的最爱</small>
+                <small>好歌值得反复聆听，Soundwave 征集优质歌曲，找到你的最爱。</small>
             </div>
         </div>
     </div>
 
 
-    <div class="container">
-        <div class="page-header">
-            <h3>Example page header <small>Subtext for header</small></h3>
+    <div class="container yuan-p-s2">
+        <!-- Homepage >> -->
+        <div id="MAINhomepage" class="page-header">
+            <h3>Soundwave 在线歌曲列表 <small>不定时更新，敬请期待。</small></h3>
         </div>
+        <!-- << -->
+        <!-- About >> -->
+        <div id="MAINaboutpage" class="page-header" style="display: none;">
+            <h3>About 关于此项目 <small>了解更多信息。</small></h3>
+        </div>
+        <!-- << -->
     </div>
 
 
     <nav class="navbar-inverse navbar-fixed-bottom yuan-border-top-black yuan-border-bottom-black yuan-shadow-s1 yuan-bg-dark-opacity-90">
-        <div class="container yuan-text-shadow-light yuan-color-white yuan-p-s1">
-            sdcdv
+        <div class="container yuan-max-width yuan-text-shadow yuan-color-white yuan-p-s1">
+          <div class="yuan-icon-btn-group">
+            <span class="glyphicon glyphicon-step-backward yuan-icon-btn-sm" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-play yuan-icon-btn-lg" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-step-forward yuan-icon-btn-sm" aria-hidden="true"></span>
+        </div>
+        <div class="yuan-cover">
+            <img src="./img/album.jpg">
+        </div>
         </div>
       </nav>
 
+      <footer class="yuan-footer">
+        <div class="container">
+          <ul class="yuan-footer-links">
+            <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+            <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+            <li><a href="/getting-started/#examples">实例</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+          <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" rel="noopener" target="_blank">YUANYUBO@Offline2008</a>. </p>
+          <p>Code licensed <a href="https://github.com/twbs/bootstrap/blob/v3-dev/LICENSE" rel="license noopener" target="_blank">MIT</a>.</p>
+        </div>
+      </footer>
 
 </body>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script src="./script.js"></script>
 </html>
