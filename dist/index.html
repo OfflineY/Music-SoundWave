@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.ab0485ab.css" rel="stylesheet">
-    <link href="index.2cdaf7bc.css" rel="stylesheet">
+    <link href="/index.ab0485ab.css" rel="stylesheet">
+    <link href="/index.2cdaf7bc.css" rel="stylesheet">
     <title>Soundwave</title>
 </head>
 
 <body>
 
-    <nav class="navbar-inverse yuan-border-bottom-black">
+    <nav class="navbar-inverse yuan-bg-dark yuan-border-bottom-black">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,13 +21,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand yuan-color-white yuan-font-size-s1 yuan-text-shadow" href="">Soundwave</a>
+                <a class="navbar-brand yuan-color-white yuan-font-size-s1 yuan-text-shadow" href=""><span class="glyphicon glyphicon-headphones yuan-font-size-s2"></span> Soundwave</a>
             </div>
 
             <div class="collapse navbar-collapse yuan-text-shadow" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li id="homepageBTN" class="active"><a href="#home">Homepage</a></li>
-                    <li id="aboutBTN"><a href="#about">About</a></li>
+                    <li id="homepageBTN" class="active"><a href="#">Homepage</a></li>
+                    <li id="aboutBTN"><a href="#">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -57,8 +57,18 @@
     <div class="yuan-bg-light">
         <div class="container">
             <div class="jumbotron yuan-text-shadow">
-                <h2>Hello, Soundwave.</h2>
-                <small>好歌值得反复聆听，Soundwave 征集优质歌曲，找到你的最爱。</small>
+                <!-- Homepage >> -->
+                <div id="TITILEhomepage">
+                    <h2>Soundwave 在线歌曲列表</h2>
+                    <small>好歌值得反复聆听，Soundwave 征集优质歌曲，找到你的最爱，不定时更新，敬请期待。</small>
+                </div>
+                <!-- << -->
+                <!-- About >> -->
+                <div id="TITILEaboutpage" style="display: none;">
+                    <h2>About 关于此项目 </h2>
+                    <small>了解更多关于此项目的信息。</small>
+                </div>
+                <!-- << -->
             </div>
         </div>
     </div>
@@ -66,13 +76,43 @@
 
     <div class="container yuan-p-s2">
         <!-- Homepage >> -->
-        <div id="MAINhomepage" class="page-header">
-            <h3>Soundwave 在线歌曲列表 <small>不定时更新，敬请期待。</small></h3>
+        <div id="MAINhomepage">
+            <div class="page-header">
+                <a type="button" class="btn btn-danger"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> 播放全部</a>
+                <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> 分享链接</a>
+            </div>
+
+
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">歌曲标题</th>
+                        <th scope="col">时间</th>
+                        <th scope="col">作者</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th scope="row">1 <span class="btn btn-xs glyphicon glyphicon-play-circle"></span></th>
+                        <td>CrazyTimes</td>
+                        <td>3:50</td>
+                        <td>ILLENIUM</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
         </div>
         <!-- << -->
         <!-- About >> -->
         <div id="MAINaboutpage" class="page-header" style="display: none;">
-            <h3>About 关于此项目 <small>了解更多信息。</small></h3>
+            <h3>关于此项目</h3>
+            <p>这是一个音乐库，他将会存储一些歌曲，你可以对他们进行删、改、查等操作。前端界面为 Html + Js(jquery) + css 完成，页面设计模仿网易云音乐(music.163.com)，后端待建设，预计使用 MongoDB + Express 完成。此项目开源在 Github ，使用许可证 MIT 。</p>
         </div>
         <!-- << -->
     </div>
@@ -80,32 +120,56 @@
 
     <nav class="navbar-inverse navbar-fixed-bottom yuan-border-top-black yuan-border-bottom-black yuan-shadow-s1 yuan-bg-dark-opacity-90">
         <div class="container yuan-max-width yuan-text-shadow yuan-color-white yuan-p-s1">
-          <div class="yuan-icon-btn-group">
-            <span class="glyphicon glyphicon-step-backward yuan-icon-btn-sm" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-play yuan-icon-btn-lg" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-step-forward yuan-icon-btn-sm" aria-hidden="true"></span>
-        </div>
-        <div class="yuan-cover">
-            <img src="/album.02783937.jpg">
-        </div>
-        </div>
-      </nav>
+            <div class="yuan-s1">
+                <div class="yuan-icon-btn-group">
+                    <span class="glyphicon glyphicon-step-backward yuan-icon-btn-sm" aria-hidden="true"></span>
+                    <span id="control" class="glyphicon glyphicon-play yuan-icon-btn-lg" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-step-forward yuan-icon-btn-sm" aria-hidden="true"></span>
+                </div>
+            <div class="yuan-cover">
+                <img src="/album.02783937.jpg">
+            </div>
+            <p class="yuan-s2">
+            </p><div id="songInfo" class="yuan-song-info">正在加载歌曲....</div>
+            <div id="time">
+                <div class="yuan-tiemDetail">
+                    <span id="currentTime" class="yuan-currentTime">--:--</span>/<span class="yuan-allTime" id="allTime">--:--</span>
+                </div>
+            </div>
+        <p></p>
+            <audio id="audio" loop="loop" autoplay="autoplay"></audio>
+<br>
+            <div class="progress yuan-progress">
+                <div id="speed" class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                </div>
+              </div>
+              <section class="progressBar" style="display: none;">
+                <div class="progressBac"></div>
+                <div class="speed" id="sped"></div>
+                <div class="drag" id="drag"></div>
+            </section>
 
-      <footer class="yuan-footer">
-        <div class="container">
-          <ul class="yuan-footer-links">
-            <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
-            <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-            <li><a href="/getting-started/#examples">实例</a></li>
-            <li><a href="/about/">关于</a></li>
-          </ul>
-          <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" rel="noopener" target="_blank">YUANYUBO@Offline2008</a>. </p>
-          <p>Code licensed <a href="https://github.com/twbs/bootstrap/blob/v3-dev/LICENSE" rel="license noopener" target="_blank">MIT</a>.</p>
+            
         </div>
-      </footer>
+        </div>
+    </nav>
+
+    <footer class="yuan-footer">
+        <div class="container">
+            <ul class="yuan-footer-links">
+                <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+                <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+                <li><a href="/getting-started/#examples">实例</a></li>
+                <li><a href="/about/">关于</a></li>
+            </ul>
+            <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" rel="noopener" target="_blank">YUANYUBO@Offline2008</a>. </p>
+            <p>Code licensed <a href="https://github.com/twbs/bootstrap/blob/v3-dev/LICENSE" rel="license noopener" target="_blank">MIT</a>.</p>
+        </div>
+    </footer>
 
 </body>
-<script src="index.bb9d3ade.js"></script>
-<script src="index.23e21ab1.js"></script>
-<script src="index.44983732.js"></script>
+<script src="/index.bb9d3ade.js"></script>
+<script src="/index.23e21ab1.js"></script>
+<script src="/index.44983732.js"></script>
+
 </html>
