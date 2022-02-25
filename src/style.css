@@ -7,12 +7,16 @@
 /* 基础样式 */
 *{
     font-size: 15px;
+    transition: .3s;
 }
 small {
     font-size: 15px;
 }
 p{
     font-size: 15px;
+}
+.table>thead>tr>th {
+    border-bottom: 0 solid #99979c;
 }
 /* 辅助样式 */
 .yuan-mb-0 {
@@ -40,7 +44,8 @@ p{
 }
 
 .yuan-bg-dark {
-    background-color: #2f2f2f !important;
+    background-image: linear-gradient(rgb(50, 50, 50), rgba(35, 35, 35));
+    /*background-color: #2f2f2f !important;*/
 }
 
 .yuan-bg-dark-opacity-90 {
@@ -62,7 +67,10 @@ p{
 .yuan-shadow-s1 {
     box-shadow: 0 -1px 5px rgba(0, 0, 0, .7);
 }
-
+.yuan-shadow-s2 {
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, .7);
+    z-index: 999;
+}
 .yuan-font-size-s1 {
     font-size: 25px;
 }
@@ -72,7 +80,7 @@ p{
 }
 
 .yuan-text-shadow {
-    text-shadow: 0 0 1px rgb(136, 136, 136);
+    text-shadow  : 0 .5px 0 #000000;
 }
 
 .yuan-border-top-black {
@@ -87,12 +95,17 @@ p{
     border-bottom: 1px solid #a01111;
 }
 
+.yuan-border-top-red{
+    border-top: 2px solid #a01111;
+}
+
 .yuan-icon-btn-lg {
     padding      : 8px;
     margin       : 0 10px;
     font-size    : 15px;
     border-radius: 50px;
     border       : 2px solid #eee;
+    cursor:pointer
 }
 
 .yuan-icon-btn-lg:hover,
@@ -107,6 +120,7 @@ p{
     border-radius: 50px;
     border       : 2px solid #b6b6b6;
     color        : #b6b6b6;
+    cursor:pointer
 }
 
 .yuan-max-idth {
@@ -114,22 +128,20 @@ p{
 }
 
 .yuan-footer {
-    padding-top     : 50px;
+    padding-top     : 20px;
     padding-bottom  : 90px;
-    margin-top      : 100px;
+    margin-top      : 50px;
     color           : #99979c;
     text-align      : center;
     background-color: #222;
+    border-top: 5px solid #a01111;
+    text-shadow: 0 1px 0 #000000;
 }
 
 .yuan-footer a {
     color: #ffffff;
 }
 
-.yuan-footer-links {
-    padding-left : 0;
-    margin-bottom: 20px;
-}
 
 .yuan-footer-links li {
     display      : inline-block;
@@ -191,6 +203,7 @@ p{
 }
 
 .yuan-icon-btn-group {
+    user-select:none;
     float       : left;
     margin-right: 0px;
 }
@@ -232,7 +245,9 @@ p{
     height          : 8px;
     background-color: #1d1d1d;
 }
-
+.progress-bar{
+    border-radius: 4px;
+}
 @media (min-width:375px) and (max-width: 460px) {
     .yuan-p-s2 {
         padding: 0 20px;
@@ -245,4 +260,9 @@ p{
     .yuan-tiemDetail {
         float: left;
     }
+}
+.yuan-play-btn-sm{
+    font-size: 15px;
+    padding: 0 2px;
+    margin-left: 10px;
 }
